@@ -77,14 +77,14 @@ parallel --jobs 0 --halt soon,fail=1 \
 find . -name "*.tar.gz" | parallel --halt soon,fail=1 'extract_dotnet_sdk {}'
 
 # Smoke test each SDK
-for sdk in $sortedSdks; do
-    mksamples "$sdk" "console"
-    mksamples "$sdk" "mstest"
-    mksamples "$sdk" "xunit"
-    mksamples "$sdk" "web"
-    mksamples "$sdk" "mvc"
-    mksamples "$sdk" "webapi"
-done
+# for sdk in $sortedSdks; do
+#     mksamples "$sdk" "console"
+#     mksamples "$sdk" "mstest"
+#     mksamples "$sdk" "xunit"
+#     mksamples "$sdk" "web"
+#     mksamples "$sdk" "mvc"
+#     mksamples "$sdk" "webapi"
+# done
 
 # NuGetFallbackFolder at /usr/share/dotnet/sdk/NuGetFallbackFolder is warmed up by smoke test
 # Additional FTE will just copy to ~/.dotnet/NuGet which provides no benefit on a fungible machine
