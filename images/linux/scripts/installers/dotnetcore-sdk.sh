@@ -76,14 +76,14 @@ done
 rm urls
 
 # Smoke test each SDK
-for sdk in $sortedSdks; do
-    mksamples "$sdk" "console"
-    mksamples "$sdk" "mstest"
-    mksamples "$sdk" "xunit"
-    mksamples "$sdk" "web"
-    mksamples "$sdk" "mvc"
-    mksamples "$sdk" "webapi"
-done
+# for sdk in $sortedSdks; do
+#     mksamples "$sdk" "console"
+#     mksamples "$sdk" "mstest"
+#     mksamples "$sdk" "xunit"
+#     mksamples "$sdk" "web"
+#     mksamples "$sdk" "mvc"
+#     mksamples "$sdk" "webapi"
+# done
 
 # NuGetFallbackFolder at /usr/share/dotnet/sdk/NuGetFallbackFolder is warmed up by smoke test
 # Additional FTE will just copy to ~/.dotnet/NuGet which provides no benefit on a fungible machine
